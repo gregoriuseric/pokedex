@@ -11,21 +11,22 @@ const PokemonDetails = (props) => {
   const [pokemon, setPokemon] = useState();
 
   // FETCHING POKEMON API TO GET THE ID
-  const getPokemon = () => {
-    axios
-      .get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}/`)
-      .then((response) => {
-        const { data } = response;
-        setPokemon(data);
-      })
-      .catch((error) => {
-        setPokemon(false);
-      });
-  };
-
   useEffect(() => {
+    const getPokemon = () => {
+      axios
+        .get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}/`)
+        .then((response) => {
+          const { data } = response;
+          setPokemon(data);
+        })
+        .catch((error) => {
+          setPokemon(false);
+        });
+    };
     return getPokemon();
-  }, []);
+  }, [pokemonId]);
+
+  console.log(pokemonId);
 
   // RENDERING POKEMON DETAIL CARD
   const generatePokemon = (pokemon) => {
