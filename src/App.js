@@ -29,7 +29,7 @@ function App(props) {
         </Link>
 
         <Link to="/pokemonlist">
-          <List>Pokemon List</List>
+          <List>My Pokemon List</List>
         </Link>
       </Navbar>
 
@@ -66,7 +66,7 @@ const List = styled.h2`
   text-align: center;
   padding: 1rem 0;
   background-color: salmon;
-  width: 200px;
+  width: 250px;
   border-radius: 5px;
 `;
 export default App;
