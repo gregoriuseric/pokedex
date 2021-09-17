@@ -26,8 +26,6 @@ const PokemonDetails = (props) => {
     return getPokemon();
   }, [pokemonId]);
 
-  console.log(pokemonId);
-
   // RENDERING POKEMON DETAIL CARD
   const generatePokemon = (pokemon) => {
     const { name, id, stats, types, sprites } = pokemon;
